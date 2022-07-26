@@ -1,0 +1,23 @@
+ 1 #! /usr/bin/python3
+  2 
+  3 while True:
+  4     temp = input("Enter a temparture Ex:30 F:")
+  5 
+  6     unit = temp.split(" ")[1]
+  7 
+  8     number = float(temp.split(" ")[0])
+  9 
+ 10     if unit in ['K','k']:
+ 11         nuk = number - 273
+ 12         num = (float(nuk) * 1.8) + 32
+ 13         print (nuk, 'C')
+ 14         print (num, 'F')
+ 15 
+ 16 
+ 17     else:
+ 18         if unit in ['C','c']:
+ 19             numfar = (float(number) * 1.8) + 32
+ 20             print (numfar, "F")
+ 21 
+ 22         elif unit in ['F','f']:
+ 23             nucel = (float(number) - 32)/1.8
