@@ -43,3 +43,21 @@ with open('school_prompt.txt', 'r') as myfile:
             three.append(line.split()[2])
             
    -finds the third word of every line 
+   
+   
+   
+   p_words = []
+with open('school_prompt.txt', 'r') as myfile:
+    words = myfile.read().split()
+    
+for word in words:
+    if 'p' in word:
+        p_words.append(word)
+-gives every word with p in it 
+
+
+
+with open('myfile.txt','r') as myfile:
+      file = myfile.read()
+with open('myfile2.txt','w') as myfile2:
+      myfile2.write(file)
