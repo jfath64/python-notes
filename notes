@@ -21,3 +21,25 @@
  21 
  22         elif unit in ['F','f']:
  23             nucel = (float(number) - 32)/1.8
+
+
+files:
+ with open('travel_plans.txt', 'r')as myfile:
+ 
+ with open('emotion_words.txt', 'r') as myfile:
+    num_words = len(myfile.read().split())
+     -gives number of words on document
+    
+    with open('travel_plans.txt', 'r') as myfile:
+          num = len(myfile.read())
+          -gives nubmer of letters on document
+          
+          
+          
+  three = []
+with open('school_prompt.txt', 'r') as myfile:
+        lines = myfile.readlines()
+        for line in lines:
+            three.append(line.split()[2])
+            
+   -finds the third word of every line 
