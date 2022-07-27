@@ -36,6 +36,21 @@ files:
           
           
           
+  binary:
+  ord(msg)
+  -gvies ordanal value of varible
+  
+  format(ord(msg), '0>8b')
+  -converts msg value to 8 bits binary 
+  
+  chr(int('01100001', 2))
+  -converts binary into int with base 2 which then converts it to a character
+  
+  
+  
+          
+          
+          
   three = []
 with open('school_prompt.txt', 'r') as myfile:
         lines = myfile.readlines()
