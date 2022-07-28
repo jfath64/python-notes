@@ -64,6 +64,7 @@ with open('school_prompt.txt', 'r') as myfile:
    p_words = []
 with open('school_prompt.txt', 'r') as myfile:
     words = myfile.read().split()
+
     
 for word in words:
     if 'p' in word:
@@ -76,3 +77,30 @@ with open('myfile.txt','r') as myfile:
       file = myfile.read()
 with open('myfile2.txt','w') as myfile2:
       myfile2.write(file)
+      
+     
+Imports:
+
+ 
+ #! /usr/bin/python3
+  2 import math as m
+  3 print(m.cos(m.pi))
+  
+  
+  https://docs.python.org/3.10/library/functions.html
+  
+  
+  func(*args)
+  -varible length argument
+  
+  y = lambda n:n+100
+  
+ Dictionary:
+ dict = {'L': 1, 'G', 3}
+ dict ['L'] 
+    1
+ -can add more values on top
+ 
+ myNum = [4,2,0,5,5,5,1,7,7,5]
+ print ('({}{}{})-{}{}{}-{}{}{}{}'.format(*myNum))
+   (450)-555-1775
