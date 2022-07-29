@@ -104,3 +104,241 @@ Imports:
  myNum = [4,2,0,5,5,5,1,7,7,5]
  print ('({}{}{})-{}{}{}-{}{}{}{}'.format(*myNum))
    (450)-555-1775
+   
+   
+   
+   
+   
+   
+  #!/usr/bin/env python3return float(sum(args) / len(args))
+  2 
+  3 
+  4 def q1(floatstr):
+  5     '''newList = []
+  6     for i in floatstr.split(','):
+  7         newList.append(float(i))
+  8 
+  9     return newList
+ 10     '''
+ 11     return [float(i)for i in floatstr.split(',')]
+ 12     'return list(map(float, floatstr.split(',')))'
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 '''
+ 19     TLO: 112-SCRPY002, LSA 3,4
+ 20     Given the floatstr, which is a comma separated string of
+ 21     floats, return a list with each of the floats in the 
+ 22     argument as elements in the list.
+ 23     '''
+ 24 
+ 25 def q2(*args):
+ 26 
+ 27 
+ 28     return float(sum(args) / len(args))
+ 29 
+ 30 
+ 31 
+ 32 
+ 33     '''
+ 34     TLO: 112-SCRPY006, LSA 3
+ 35     TLO: 112-SCRPY007, LSA 4
+ 36     Given the variable length argument list, return the average
+ 37     of all the arguments as a float
+ 38     '''
+ 39 
+ 40 
+ 41 def q3(lst,n):
+ 42    ''' nl = []
+ 43     counter = -1
+ 44     for i in range(n):
+ 45        nl.append(lst[counter])
+ 46        counter -= 1
+ 47     nl.reverse()
+ 48     return nl
+ 49     '''
+ 50    return lst[-n:]
+ 51 
+ 52 
+ 53 
+ 54 
+ 55 
+ 56 
+ 57 
+ 58    ''' TLO: 112-SCRPY004, LSA 3
+ 59     Given a list (lst) and a number of items (n), return a new 
+ 60     list containing the last n entries in lst.
+ 61     '''
+ 62 
+ 63 def q4(strng):
+ 64     num = []
+ 65     for i in range(0,len(strng)):
+ 66         num.append(ord(strng[i]))
+ 67 
+68     return num
+ 69 
+ 70 #return [ord(i) for i in string]
+ 71    # return list(map(ord,string))
+ 72 
+ 73 
+ 74 
+ 75 
+ 76 
+ 77     '''
+ 78     TLO: 112-SCRPY004, LSA 1,2
+ 79     TLO: 112-SCRPY006, LSA 3
+ 80     Given an input string, return a list containing the ordinal numbers of 
+ 81     each character in the string in the order found in the input string.
+ 82     '''
+ 83 
+ 84 
+ 85 def q5(strng):
+ 86     l = (strng.split())
+ 87     tup = tuple(l)
+ 88 
+ 89     return tup
+ 90 
+ 91 #return tuple(string.split())
+ 92    #!/usr/bin/env python3return float(sum(args) / len(args))
+ 93   2
+ 94   3
+ 95   4 def q1(floatstr):
+ 96   5     '''newList = []
+ 97   6     for i in floatstr.split(','):
+ 98   7         newList.append(float(i))
+ 99   8 
+100   9     return newList
+101  10     '''
+102  11     return [float(i)for i in floatstr.split(',')]
+103  12     'return list(map(float, floatstr.split(',')))'
+104  13
+105  14
+106  15
+107  16
+108  17
+109  18 '''
+110  19     TLO: 112-SCRPY002, LSA 3,4
+111  20     Given the floatstr, which is a comma separated string of
+112  21     floats, return a list with each of the floats in the 
+113  22     argument as elements in the list.
+114  23     '''
+115  24
+116  #!/usr/bin/env python3return float(sum(args) / len(args))
+117   2
+118   3
+119   4 def q1(floatstr):
+120   5     '''newList = []
+121   6     for i in floatstr.split(','):
+122   7         newList.append(float(i))
+123   8 
+124   9     return newList
+125  10     '''
+126  11     return [float(i)for i in floatstr.split(',')]
+127  12     'return list(map(float, floatstr.split(',')))'
+128  13
+129  14
+130  15
+131  16
+132  17
+133  18 '''
+134  19     TLO: 112-SCRPY002, LSA 3,4
+134     Example result:
+135     2540.45 
+136 
+137     How the above result was computed:
+138     (289.99 * 5) + (363.50 * 3)
+139     '''
+140 
+141 def q7(filename):
+142     with open(filename, 'r') as myfile:
+143         line = myfile.readlines() [0]
+144         return len(line) - 1
+145 
+146 
+147 
+148 
+149 
+150 
+151     '''
+152     TLO: 112-SCRPY005, LSA 1
+153     Given a filename, open the file and return the length of the first line 
+154     in the file excluding the line terminator.
+155     '''
+156 
+157 def q8(filename,lst):
+158     with open(filename,'w') as myfile:
+159             for w in lst:
+160                 if "stop" in w or "STOP" in w:
+161                     break
+162                 else:
+163                     myfile.write(w + '\n')
+164 
+165 
+166 
+167 
+168 
+169 
+170 
+171     return
+172     '''
+173     TLO: 112-SCRPY003, LSA 1
+174     TLO: 112-SCRPY004, LSA 1,2
+175     TLO: 112-SCRPY005, LSA 1
+176     Given a filename and a list, write each entry from the list to the file
+177     on separate lines until a case-insensitive entry of "stop" is found in 
+178     the list. If "stop" is not found in the list, write the entire list to 
+179     the file on separate lines.
+180     '''
+181 
+182 def q9(miltime):
+183 
+184     if miltime < 259 or (miltime > 2100 and miltime < 2400):
+185         return 'Good Night'
+186     elif miltime < 1159:
+187         return 'Good Morning'
+188     elif miltime < 1559:
+189         return 'Good Afternoon'
+190     elif miltime < 2059:
+191         return 'Good Evening'
+192 
+193 
+194 
+195 
+196 
+197 
+198 
+199 
+200 
+201     '''
+202     TLO: 112-SCRPY003, LSA 1
+203     Given the military time in the argument miltime, return a string 
+204     containing the greeting of the day.
+205     0300-1159 "Good Morning"
+206     1200-1559  "Good Afternoon"
+207     1600-2059 "Good Evening"
+208     2100-0259 "Good Night"
+209     '''
+210 
+211 def q10(numlist):
+212     for num in numlist:
+213         if num < 0:
+214             return False
+215         return True
+216 
+217 
+218 
+219 
+220    # return all(map(lambda x: x >=0,numlist))
+221 
+222 
+223 
+224     '''
+225     TLO: 112-SCRPY003, LSA 1
+226     TLO: 112-SCRPY004, LSA 1
+227     Given the argument numlist as a list of numbers, return True if all 
+228     numbers in the list are NOT negative. If any numbers in the list are
+229     negative, return False.
+230      '''
+
