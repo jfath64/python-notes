@@ -342,3 +342,122 @@ Imports:
 229     negative, return False.
 230      '''
 
+
+1 #!/usr/bin/env python3
+  2 
+  3 def q1(sentence):
+  4     return (' '.join(reversed(sentence.split())))
+  5     '''
+  6     Given a string of multiple words separated by single spaces,
+  7     return a new string with the sentence reversed. The words
+  8     themselves should remain as they are. For example, given
+  9     'it is accepted as a masterpiece on strategy', the returned
+ 10     string should be 'strategy on masterpiece a as accepted is it'.
+ 11     '''
+ 12     pass
+ 13 def q2(n):
+ 14     if n > 0:
+ 15        return "{:,}".format(n)
+ 16 
+ 17 def q3(lst0, lst1):
+ 18     return sorted(lst0 + lst1, reverse = True)
+ 19     '''
+ 20     Given two lists of integers, return a sorted list that contains
+ 21     all integers from both lists in descending order. For example,
+ 22     given [3,4,9] and [8,1,5] the returned list should be [9,8,5,4,3,1].
+ 23     The returned list may contain duplicates.
+ 24     '''
+ 25     pass
+ 26     
+ 27 def q4(s1,s2,s3):
+ 28     avg = (s1 + s2 + s3)/3
+ 29     if avg > 50:
+ 30         return 'GO'
+ 31     else: 
+ 32         return 'NOGO'
+ 33     ''' 
+ 34     Given 3 scores in the range [0-100] inclusive, return 'GO' if
+ 35     the average score is greater than 50. Otherwise return 'NOGO'.
+ 36     '''
+ 37     pass
+ 38     
+ 39 #def q5(integer, limit):
+ 40     #multiples = []
+ 41     #for i in range(0,limit+1):
+ 42         #if (i%integer==0) and (i%2==0):
+ 43            #multiples.append(i)
+ 44     #return multiples
+ 45     '''
+ 46     Given an integer and limit, return a list of even multiples of the
+ 47     integer up to and including the limit. For example, if integer==3 and
+ 48     limit==30, the returned list should be [0,6,12,18,24,30]. Note, 0 is
+ 49     a multiple of any integer except 0 itself.
+ 50     '''
+ 51     pass
+ 52     
+ 53 def q6(f0, f1):
+ 54     diffs = []
+ 55     linenum = 0
+ 56     with open(f0) as fp0:
+ 57         with open(f1) as fp1:
+ 58             file0 = fp0.readlines()
+ 59             file1 = fp1.readlines()
+ 60         for i in file0:
+ 61             if i != file1[linenum]:
+ 62                 diffs.append(linenum)
+ 63             linenum += 1
+ 64         return diffs
+ 65     ''' 
+ 66     Given two filenames, return a list whose elements consist of line numbers
+ 67     for which the two files differ. The first line is considered line 0.
+'''
+ 69     pass
+ 70 
+ 71 def q7(lst):
+ 72 
+ 73     for i in lst:
+ 74         if i in seen:
+ 75             return i
+ 76         else:
+ 77             seen.append(i)
+ 78     '''
+ 79     Return the first duplicate value in the given list.
+ 80     For example, if given [5,7,9,1,3,7,9,5], the returned value should
+ 81     be 7.
+ 82     '''
+ 83     pass
+ 84 
+ 85 def q8(strng):
+ 86 
+ 87     return len(min(string.split(), key=len))
+ 88     '''
+ 89     Given a sentence as a string with words being separated by a single space,
+ 90     return the length of the shortest word.
+ 91     '''
+ 92     pass
+ 93 
+ 94 def q9(strng):
+ 95     chars = []
+ 96     for i in strng:
+ 97         if i.isnumeric():
+ 98             chars.append(i)
+ 99     return chr(int(' '.join(chars)))
+100     '''
+101     Given an alphanumeric string, return the character whose ascii value
+102     is that of the integer represenation of all of the digits in the string
+103     concatenated in the order in which they appear. For example, given
+104     'hell9oworld7', the returned character should be 'a' which has
+105     the ascii value of 97.
+106     '''
+107     pass
+108 
+109 def q10(arr):
+110     for i in range(0,len(arr)-1):
+111         if arr[i+1] - arr[i] !=1:
+112             return arr[i+1]
+113     '''
+114     Given a list of positive integers sorted in ascending order, return
+115     the first non-consecutive value. If all values are consecutive, return
+116     None. For example, given [1,2,3,4,6,7], the returned value should be 6. 
+117     '''
+118     pass
