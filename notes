@@ -54,7 +54,9 @@ files:
   three = []
 with open('school_prompt.txt', 'r') as myfile:
         lines = myfile.readlines()
-        for line in lines:
+        for line in lines:3 def q1(sentence):
+  4     return (' '.join(reversed(sentence.split())))
+  5     '''
             three.append(line.split()[2])
             
    -finds the third word of every line 
@@ -461,3 +463,106 @@ Imports:
 116     None. For example, given [1,2,3,4,6,7], the returned value should be 6. 
 117     '''
 118     pass
+
+
+
+
+Your task is to write a function which returns the sum of following series upto nth term(parameter).
+
+Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+
+
+
+return '{:.2F}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
+
+
+TEST NOTES:
+
+['192','168,'28','50.]
+ if int(myIP.split('.')[-1]) <= 62:
+ -ip  falls in a certain range
+ 
+ myIP[0:3]
+ -first 3
+ 
+ myIP[-2:]
+ -last 2
+ 
+ myString
+ 'The quick brown fox'
+ myString[::-1]
+ -prints backwords
+ 
+ list(range(0,10))
+ -lists range out 
+ 
+ --ranges are iterable
+ 
+ range(0,50,10)
+ -0-50 counting by 10s
+ 
+ first = 'aaron'
+ middle ='andrew'
+ last = 'anderson'
+ domain = 'cornetto'
+ '{}.{}.{}@{}.com'.format(first, middle[0], last, domain)
+
+f{}'{first.{middle[0]}.{last}@{domain}.com'
+
+f'{first[0]{middle[0]}{last[:5]}@{domain}.com'
+
+mDict{'Pvt:'E-1}
+
+myDict['PFC'] = 'E-2'
+-adds PFC to dict
+
+for i in myDict:
+ print(i)
+
+PVT
+PFC
+
+for i in myDict:
+ print(myDict[i])
+
+E-1
+E-2
+
+myRoster = ['PFC','LCPL','PVT']
+ for i in myRoster:
+  if i in myDict:
+   myDict[i] =+ 1
+   else:
+    myDict[i] = 1
+    
+    myDict
+    {'PFC': 2,'LCpl' : 1, 'PVT' : 2}
+    
+    myRank = 'Lcpl'
+    
+    myDict[myRank]
+    1
+    
+    
+    
+    with open('myfile.txt', 'r') as fp:
+         lines0(fp.readlines()[:])
+    
+    with open('myfile.txt', 'r') as fp0:
+      with open(outfile, 'w') as fp1:
+         fp1.writlines(fp0.readlines())
+         
+         
+  myEmail = 'aaron.a.anderson@gmail.com'
+  
+  myEmail.split(@)
+  
+  '.'.join(myEmail.split('@))
+  aaron.a.anderson.gmail.com
+  
+  Email.split('.')
+  
+  Email = split[:-1]
+  -removes last index
+  
+  
